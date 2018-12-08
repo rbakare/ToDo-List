@@ -23,7 +23,7 @@ class TodoTableViewCell: UITableViewCell {
     
     @IBAction func switch_change(_ sender: UISwitch) {
         if(sender.isOn){
-            titlelabel.textColor = UIColor.black
+            titlelabel.textColor = UIColor.gray
             // let updatetodo = "complted"
             
             //let key = todo.ref!.key
@@ -33,7 +33,7 @@ class TodoTableViewCell: UITableViewCell {
             
         }
         else{
-            titlelabel.textColor = UIColor.gray
+            titlelabel.textColor = UIColor.black
         }
     }
 }

@@ -26,41 +26,57 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="156.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xTV-Wd-Zra">
-                                            <rect key="frame" x="36" y="11" width="73" height="22"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="ToDo Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Gqq-Gb-dml">
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="ToDo Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Gqq-Gb-dml">
                                             <rect key="frame" x="9" y="81" width="339" height="77"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mth-J7-IE6">
+                                        <view opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="Mth-J7-IE6">
                                             <rect key="frame" x="8" y="12" width="20" height="20"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" red="0.44883469599999998" green="0.49414357139999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AAt-2Z-kg4">
-                                            <rect key="frame" x="9" y="41" width="357" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="HZh-R4-DPH">
-                                            <rect key="frame" x="319" y="0.0" width="49" height="31"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="HZh-R4-DPH">
+                                            <rect key="frame" x="317" y="1" width="51" height="30"/>
                                             <connections>
                                                 <action selector="switch_change:" destination="9Ye-A6-oD0" eventType="valueChanged" id="I9Z-bh-IVo"/>
                                             </connections>
                                         </switch>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AAt-2Z-kg4">
+                                            <rect key="frame" x="9" y="41" width="357" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xTV-Wd-Zra">
+                                            <rect key="frame" x="36" y="11" width="34" height="22"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="AAt-2Z-kg4" firstAttribute="leading" secondItem="o1O-oS-3ER" secondAttribute="leading" constant="9" id="0YD-or-N1M"/>
+                                        <constraint firstItem="AAt-2Z-kg4" firstAttribute="top" secondItem="Mth-J7-IE6" secondAttribute="bottom" constant="9" id="899-kR-Pib"/>
+                                        <constraint firstItem="Mth-J7-IE6" firstAttribute="centerY" secondItem="xTV-Wd-Zra" secondAttribute="centerY" id="8CR-Ub-oYw"/>
+                                        <constraint firstItem="Gqq-Gb-dml" firstAttribute="top" secondItem="o1O-oS-3ER" secondAttribute="top" constant="81" id="8Uh-7j-L6H"/>
+                                        <constraint firstItem="HZh-R4-DPH" firstAttribute="leading" secondItem="xTV-Wd-Zra" secondAttribute="trailing" constant="247" id="C3h-FC-f5L"/>
+                                        <constraint firstAttribute="trailing" secondItem="Gqq-Gb-dml" secondAttribute="trailing" constant="27" id="LaP-ku-vNF"/>
+                                        <constraint firstAttribute="trailing" secondItem="HZh-R4-DPH" secondAttribute="trailing" constant="9" id="M7p-Mq-e2Q"/>
+                                        <constraint firstItem="xTV-Wd-Zra" firstAttribute="leading" secondItem="Mth-J7-IE6" secondAttribute="trailing" constant="8" id="PAb-Xt-svy"/>
+                                        <constraint firstItem="AAt-2Z-kg4" firstAttribute="top" secondItem="xTV-Wd-Zra" secondAttribute="bottom" constant="8" id="PEg-1R-sgY"/>
+                                        <constraint firstItem="Gqq-Gb-dml" firstAttribute="leading" secondItem="o1O-oS-3ER" secondAttribute="leading" constant="9" id="SUa-Qd-YcE"/>
+                                        <constraint firstItem="HZh-R4-DPH" firstAttribute="top" secondItem="o1O-oS-3ER" secondAttribute="top" constant="1" id="UfH-T8-GvN"/>
+                                        <constraint firstAttribute="bottom" secondItem="Mth-J7-IE6" secondAttribute="bottom" constant="124.5" id="inT-ll-hUl"/>
+                                        <constraint firstItem="Mth-J7-IE6" firstAttribute="leading" secondItem="o1O-oS-3ER" secondAttribute="leading" constant="8" id="jMR-yF-uiv"/>
+                                        <constraint firstItem="Mth-J7-IE6" firstAttribute="top" secondItem="o1O-oS-3ER" secondAttribute="top" constant="12" id="owG-Kz-4Ue"/>
+                                        <constraint firstAttribute="trailing" secondItem="AAt-2Z-kg4" secondAttribute="trailing" constant="9" id="rMH-bz-tdq"/>
+                                        <constraint firstItem="AAt-2Z-kg4" firstAttribute="top" secondItem="HZh-R4-DPH" secondAttribute="bottom" constant="10" id="tF0-Rb-Sr9"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Gqq-Gb-dml" secondAttribute="bottom" constant="-1" id="rl6-bc-QVQ"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="colorView" destination="Mth-J7-IE6" id="LER-h6-bRP"/>
                                     <outlet property="datelabel" destination="AAt-2Z-kg4" id="1kG-0h-b4a"/>
@@ -69,11 +85,11 @@
                                     <outlet property="titlelabel" destination="xTV-Wd-Zra" id="d8b-Dz-xZC"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" rowHeight="40" id="OSW-0M-M0x">
-                                <rect key="frame" x="0.0" y="185" width="375" height="40"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" rowHeight="69" id="OSW-0M-M0x">
+                                <rect key="frame" x="0.0" y="185" width="375" height="69"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OSW-0M-M0x" id="cxM-nE-Kce">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="39.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="68.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -127,11 +143,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RiU-ZV-8TV">
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RiU-ZV-8TV">
                                 <rect key="frame" x="151" y="545" width="68" height="30"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Add ToDo">
                                     <color key="titleColor" red="0.69803921570000005" green="0.47843137250000001" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="addClicked:" destination="UBt-kN-4Q1" eventType="touchUpInside" id="N3y-oH-AL5"/>

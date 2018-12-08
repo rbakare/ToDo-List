@@ -46,14 +46,17 @@ class ToDoTableViewController: UITableViewController {
         return cell
     }
     
-    //to delete the data from the table
+    //to delete the data from by swiping t
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             toDos.remove(at: indexPath.row)
             
-            //tableView.deleteRows(at: T##[IndexPath], with: .fade)
+            
         }
     }
+    
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let addVC = segue.destination as! AddToDoViewController
         addVC.previousVC = self
