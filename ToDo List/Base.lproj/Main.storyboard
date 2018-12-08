@@ -109,7 +109,7 @@
                         <viewLayoutGuide key="safeArea" id="vU6-fe-26j"/>
                     </view>
                     <connections>
-                        <outlet property="detailTextField" destination="Cv9-bU-y7X" id="fuc-bh-HT7"/>
+                        <outlet property="detailTextField" destination="TUh-VQ-7QH" id="k6H-aF-gPc"/>
                         <outlet property="titleTextField" destination="RaD-3v-Zqs" id="stV-Ln-79M"/>
                     </connections>
                 </viewController>

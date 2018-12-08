@@ -9,18 +9,16 @@
 import UIKit
 
 class ToDoTableViewController: UITableViewController {
+   
+    // craeting Arrays
+    var toDos : [ToDo] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
-    // MARK: - Table view data source
+  
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         
@@ -39,6 +37,10 @@ class ToDoTableViewController: UITableViewController {
     }
     
 
-   
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let addVC = segue.destination as! AddToDoViewController
+        addVC.previousVC = self     //passing reference between the controllers
+        
+    }
 
 }

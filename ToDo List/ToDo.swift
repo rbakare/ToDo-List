@@ -12,4 +12,5 @@ class ToDo {
     
     var name = ""
     var complete = false
+    var notes = ""
 }
