@@ -32,6 +32,9 @@ class AddToDoViewController: UIViewController {
         toDo.notes = detailTextField.text!
         
         previousVC.toDos.append(toDo)
+        previousVC.tableView.reloadData()
+        
+        navigationController?.popViewController(animated: true)
         
     }
     
