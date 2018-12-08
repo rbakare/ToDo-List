@@ -27,14 +27,28 @@ class AddToDoViewController: UIViewController {
     
 
     @IBAction func addClicked(_ sender: Any) {
-        let toDo = ToDo()
-        toDo.name = titleTextField.text!
-        toDo.notes = detailTextField.text!
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy"
         
-        previousVC.toDos.append(toDo)
-        previousVC.tableView.reloadData()
+        let date = NSDate()
+        //var dateFormatter = DateFormatter()
+        //dateFormatter.dateFormat = "MM-dd-yyyy"
+        let dateString = dateFormatter.string(from: date as Date)
+        //println(dateString)
+        let name = titleTextField.text
+        let notes = detailTextField.text
         
-        navigationController?.popViewController(animated: true)
+        let red = CGFloat(arc4random_uniform(UInt32(255.5)))/255
+        let blue = CGFloat(arc4random_uniform(UInt32(255.5)))/255
+        let green = CGFloat(arc4random_uniform(UInt32(255.5)))/255
+        
+        _ = ToDo(name: name!, notes: notes!, date: dateString,red: red, blue: blue, green: green)
+        
+        
+       
+        //self.navigationController?.popToViewController(T##viewController: UIViewController##UIViewController, animated: T##Bool)
+        self.navigationController?.popViewController(animated: true)
+        // self.navigationController?.popToViewControllerAnimated(true)
         
     }
     
