@@ -12,7 +12,7 @@ import UIKit
 
 class AddToDoViewController: UIViewController {
     
-    var previousVC = ToDoTableViewController()
+   var previousVC =  ToDoTableViewController()
 
     @IBOutlet weak var titleTextField: UITextField!
     
@@ -42,7 +42,15 @@ class AddToDoViewController: UIViewController {
         let blue = CGFloat(arc4random_uniform(UInt32(255.5)))/255
         let green = CGFloat(arc4random_uniform(UInt32(255.5)))/255
         
-        _ = ToDo(name: name!, notes: notes!, date: dateString,red: red, blue: blue, green: green)
+        let toDos = ToDo(name: name!, notes: notes!, date: dateString,red: red, blue: blue, green: green)
+        toDos.name = titleTextField.text!
+        toDos.notes = detailTextField.text!
+        
+        
+        
+        previousVC.toDos.append(toDos)
+        previousVC.tableView.reloadData()
+      
         
         
        

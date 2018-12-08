@@ -15,7 +15,7 @@
 		57504D4921BB8DDA00E4FD99 /* ToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57504D4821BB8DDA00E4FD99 /* ToDoTableViewController.swift */; };
 		57504D4B21BB8EAF00E4FD99 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57504D4A21BB8EAF00E4FD99 /* ToDo.swift */; };
 		57504D4D21BBA48A00E4FD99 /* AddToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57504D4C21BBA48A00E4FD99 /* AddToDoViewController.swift */; };
-		57504D4F21BBCC4800E4FD99 /* ToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57504D4E21BBCC4800E4FD99 /* ToDoTableViewCell.swift */; };
+		57504D5521BBD1A600E4FD99 /* TodoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57504D5421BBD1A600E4FD99 /* TodoTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +29,7 @@
 		57504D4821BB8DDA00E4FD99 /* ToDoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewController.swift; sourceTree = "<group>"; };
 		57504D4A21BB8EAF00E4FD99 /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 		57504D4C21BBA48A00E4FD99 /* AddToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoViewController.swift; sourceTree = "<group>"; };
-		57504D4E21BBCC4800E4FD99 /* ToDoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewCell.swift; sourceTree = "<group>"; };
+		57504D5421BBD1A600E4FD99 /* TodoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +46,6 @@
 		57504D2721BB88F900E4FD99 = {
 			isa = PBXGroup;
 			children = (
-				57504D4E21BBCC4800E4FD99 /* ToDoTableViewCell.swift */,
 				57504D3221BB88F900E4FD99 /* ToDo List */,
 				57504D3121BB88F900E4FD99 /* Products */,
 			);
@@ -66,6 +65,7 @@
 				57504D3321BB88F900E4FD99 /* AppDelegate.swift */,
 				57504D4821BB8DDA00E4FD99 /* ToDoTableViewController.swift */,
 				57504D4C21BBA48A00E4FD99 /* AddToDoViewController.swift */,
+				57504D5421BBD1A600E4FD99 /* TodoTableViewCell.swift */,
 				57504D4A21BB8EAF00E4FD99 /* ToDo.swift */,
 				57504D3721BB88F900E4FD99 /* Main.storyboard */,
 				57504D3D21BB88FA00E4FD99 /* Assets.xcassets */,
@@ -150,7 +150,7 @@
 				57504D3421BB88F900E4FD99 /* AppDelegate.swift in Sources */,
 				57504D4921BB8DDA00E4FD99 /* ToDoTableViewController.swift in Sources */,
 				57504D4D21BBA48A00E4FD99 /* AddToDoViewController.swift in Sources */,
-				57504D4F21BBCC4800E4FD99 /* ToDoTableViewCell.swift in Sources */,
+				57504D5521BBD1A600E4FD99 /* TodoTableViewCell.swift in Sources */,
 				57504D3C21BB88F900E4FD99 /* ToDo_List.xcdatamodeld in Sources */,
 				57504D4B21BB8EAF00E4FD99 /* ToDo.swift in Sources */,
 			);

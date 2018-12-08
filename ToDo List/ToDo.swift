@@ -8,12 +8,13 @@
 
 import UIKit
 
+
 class ToDo {
     
-    var name = String()
+    var name : String!
     var complete = false
-    var notes = String()
-    var date = String()
+    var notes : String!
+    var date : String!
     var red : CGFloat!
     var blue : CGFloat!
     var green : CGFloat!

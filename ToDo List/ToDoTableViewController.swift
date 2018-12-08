@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class ToDoTableViewController: UITableViewController {
    
     // craeting Arrays
@@ -31,19 +32,32 @@ class ToDoTableViewController: UITableViewController {
   
 
     
+  
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as!
+        TodoTableViewCell 
+        
+        
+        cell.titlelabel.text = toDos[indexPath.row].name
+        cell.descriptionlabel.text = toDos[indexPath.row].notes
+        cell.datelabel.text=toDos[indexPath.row].date
+        cell.colorView.backgroundColor = UIColor(red: toDos[indexPath.row].red, green: toDos[indexPath.row].green, blue: toDos[indexPath.row].blue, alpha: 1.0)
+        
         return cell
     }
     
-
+    //to delete the data from the table
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            toDos.remove(at: indexPath.row)
+            
+            //tableView.deleteRows(at: T##[IndexPath], with: .fade)
+        }
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let addVC = segue.destination as! AddToDoViewController
-        addVC.previousVC = self     //passing reference between the controllers
-        
+        addVC.previousVC = self
     }
 
+  
 }
