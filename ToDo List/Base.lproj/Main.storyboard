@@ -45,10 +45,10 @@
             </objects>
             <point key="canvasLocation" x="1008.8" y="92.203898050974516"/>
         </scene>
-        <!--View Controller-->
+        <!--Add To Do View Controller-->
         <scene sceneID="DsS-Vg-ddc">
             <objects>
-                <viewController id="UBt-kN-4Q1" sceneMemberID="viewController">
+                <viewController id="UBt-kN-4Q1" customClass="AddToDoViewController" customModule="ToDo_List" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cv9-bU-y7X">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -83,6 +83,9 @@
                                     <color key="titleColor" red="0.69803921570000005" green="0.47843137250000001" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="addClicked:" destination="UBt-kN-4Q1" eventType="touchUpInside" id="N3y-oH-AL5"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -105,6 +108,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vU6-fe-26j"/>
                     </view>
+                    <connections>
+                        <outlet property="detailTextField" destination="Cv9-bU-y7X" id="fuc-bh-HT7"/>
+                        <outlet property="titleTextField" destination="RaD-3v-Zqs" id="stV-Ln-79M"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y51-ur-m0F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
