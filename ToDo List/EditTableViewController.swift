@@ -1,33 +1,31 @@
 //
-//  ToDo List APP
-//  AddToDoViewController.swift
+//  EditTableViewController.swift
 //  ToDo List
 //
-//  Created by Raheem Bakare on 2018-12-08.
-//  Student ID: 300973581
+//  Created by Raheem Bakare on 2018-12-09.
 //  Copyright © 2018 centennial college. All rights reserved.
 //
 
 import UIKit
 
-class AddToDoViewController: UIViewController {
-   var toDos : [ToDo] = []
+class EditTableViewController: UITableViewController {
+    var todo : ToDo!
    var previousVC =  ToDoTableViewController()
-
     @IBOutlet weak var titleTextField: UITextField!
     
     @IBOutlet weak var detailTextField: UITextView!
-    
-    
+  
+  
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+      
+        titleTextField.text = todo.name
+       detailTextField.text = todo.notes
+        // Do any additional setup after loading the view, typically from a nib.
     }
     
-
-    @IBAction func addClicked(_ sender: Any) {
-        
+    
+    @IBAction func updateClicked(_ sender: Any) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM/yyyy"
         
@@ -44,18 +42,14 @@ class AddToDoViewController: UIViewController {
         let green = CGFloat(arc4random_uniform(UInt32(255.5)))/255
         
         let toDo = ToDo(name: name!, notes: notes!, date: dateString,red: red, blue: blue, green: green)
+        
         toDo.name = titleTextField.text!
         toDo.notes = detailTextField.text!
         
-        
-        
-        previousVC.toDos.append(toDo)
-        previousVC.tableView.reloadData()
-      
-        
-
-        self.navigationController?.popViewController(animated: true)
        
+    
+        self.navigationController?.popViewController(animated: true)
+        // self.navigationController?.popToViewControllerAnimated(true)
         
     }
     
